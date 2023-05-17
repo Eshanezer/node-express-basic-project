@@ -13,7 +13,6 @@ const {
 // });
 
 router.route('/').get(getContacts).post(createContact);
-router.post("/", createContact);
 router.get("/:id", getByIdContact);
 router.put("/:id", updateContact);
 router.delete("/:id", deleteContact);
