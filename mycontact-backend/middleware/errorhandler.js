@@ -1,7 +1,6 @@
 const { constansts } = require("../constants");
-const erorHandler = (err, req, res, next) => {
+const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode ? res.statusCode : 500;
-
   switch (statusCode) {
     case constansts.VALIDATION_ERROR:
       res.json({
@@ -43,4 +42,4 @@ const erorHandler = (err, req, res, next) => {
   }
 };
 
-module.exports = erorHandler;
+module.exports = errorHandler;
