@@ -11,6 +11,7 @@ const app =express();
 
 app.use(express.json());
 app.use('/api/contacts',require('./routes/contact.routes'));
+app.use('/api/users',require('./routes/user.routes'));
 app.use(errorHandler);
 
 
